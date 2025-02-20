@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Failure: Simulation finished
+Time: 2560 ns  Iteration: 0  Process: /simple_adder_tb/line__49  File: P:/PLD_VHDL/ADDER_4bit/sources/simple_adder_tb.vhd
+$finish called at time : 2560 ns : File "P:/PLD_VHDL/ADDER_4bit/sources/simple_adder_tb.vhd" Line 60

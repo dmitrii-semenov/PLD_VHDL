@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../sources/simple_adder.vhd" \
+"../../../../sources/simple_adder_tb.vhd" \
+
+# Do not sort compile order
+nosort
