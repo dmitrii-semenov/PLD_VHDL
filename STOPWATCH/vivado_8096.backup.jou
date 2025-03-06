@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Mar  6 08:18:26 2025
+# Process ID: 8096
+# Current directory: C:/Users/240689/Downloads/PC_04_template_2025
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8992 C:\Users\240689\Downloads\PC_04_template_2025\Stopwatch.xpr
+# Log file: C:/Users/240689/Downloads/PC_04_template_2025/vivado.log
+# Journal file: C:/Users/240689/Downloads/PC_04_template_2025\vivado.jou
+# Running On: PC-077, OS: Windows, CPU Frequency: 3293 MHz, CPU Physical cores: 4, Host memory: 4160 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/240689/Downloads/PC_04_template_2025/Stopwatch.xpr
+update_compile_order -fileset sources_1
+save_project_as STOPWATCH P:/PLD_VHDL/STOPWATCH -force
+update_files -from_files P:/PLD_VHDL/STOPWATCH/sources/stopwatch_fsm.vhd -to_files C:/Users/240689/Downloads/PC_04_template_2025/SOURCES/stopwatch_fsm.vhd -filesets [get_filesets *]
+update_files -from_files P:/PLD_VHDL/STOPWATCH/sources/ce_gen.vhd -to_files C:/Users/240689/Downloads/PC_04_template_2025/SOURCES/ce_gen.vhd -filesets [get_filesets *]
+update_files -from_files P:/PLD_VHDL/STOPWATCH/sources/bcd_counter.vhd -to_files C:/Users/240689/Downloads/PC_04_template_2025/SOURCES/bcd_counter.vhd -filesets [get_filesets *]
+update_files -from_files P:/PLD_VHDL/STOPWATCH/sources/edge_detector.vhd -to_files C:/Users/240689/Downloads/PC_04_template_2025/SOURCES/edge_detector.vhd -filesets [get_filesets *]
+update_files -from_files P:/PLD_VHDL/STOPWATCH/sources/debouncer.vhd -to_files C:/Users/240689/Downloads/PC_04_template_2025/SOURCES/debouncer.vhd -filesets [get_filesets *]
+update_files -from_files P:/PLD_VHDL/STOPWATCH/sources/sync_reg.vhd -to_files C:/Users/240689/Downloads/PC_04_template_2025/SOURCES/sync_reg.vhd -filesets [get_filesets *]
+update_files -from_files P:/PLD_VHDL/STOPWATCH/sources/btn_in.vhd -to_files C:/Users/240689/Downloads/PC_04_template_2025/SOURCES/btn_in.vhd -filesets [get_filesets *]
+update_files -from_files P:/PLD_VHDL/STOPWATCH/sources/btn_in.vhd -to_files C:/Users/240689/Downloads/PC_04_template_2025/SOURCES/btn_in.vhd -filesets [get_filesets *]
+update_files -from_files P:/PLD_VHDL/STOPWATCH/sources/btn_in.vhd -to_files C:/Users/240689/Downloads/PC_04_template_2025/SOURCES/btn_in.vhd -filesets [get_filesets *]
