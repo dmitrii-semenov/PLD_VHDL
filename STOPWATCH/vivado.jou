@@ -2,10 +2,10 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Mar  6 08:26:30 2025
-# Process ID: 9280
+# Start of session at: Thu Mar 13 09:30:26 2025
+# Process ID: 8412
 # Current directory: P:/PLD_VHDL/STOPWATCH
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6004 P:\PLD_VHDL\STOPWATCH\Stopwatch.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5152 P:\PLD_VHDL\STOPWATCH\Stopwatch.xpr
 # Log file: P:/PLD_VHDL/STOPWATCH/vivado.log
 # Journal file: P:/PLD_VHDL/STOPWATCH\vivado.jou
 # Running On: PC-077, OS: Windows, CPU Frequency: 3293 MHz, CPU Physical cores: 4, Host memory: 4160 MB
@@ -13,52 +13,26 @@
 start_gui
 open_project P:/PLD_VHDL/STOPWATCH/Stopwatch.xpr
 update_compile_order -fileset sources_1
-set_property -name {xsim.simulate.runtime} -value {-all} -objects [get_filesets sim_1]
 launch_simulation
 source ce_gen_tb.tcl
-export_ip_user_files -of_objects  [get_files P:/PLD_VHDL/STOPWATCH/SOURCES/SIM/stopwatch_tb.vhd] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 P:/PLD_VHDL/STOPWATCH/SOURCES/SIM/stopwatch_tb.vhd
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open P:/PLD_VHDL/STOPWATCH/sources/bcd_counter_tb.vhd w ]
-add_files -fileset sim_1 P:/PLD_VHDL/STOPWATCH/sources/bcd_counter_tb.vhd
-update_compile_order -fileset sim_1
+close_sim
 # Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
 set_property source_mgmt_mode None [current_project]
-set_property top bcd_counter_tb [get_filesets sim_1]
+set_property top stopwatch_fsm_tb [get_filesets sim_1]
 set_property top_lib xil_defaultlib [get_filesets sim_1]
 # Re-enabling previously disabled source management mode.
 set_property source_mgmt_mode All [current_project]
 update_compile_order -fileset sim_1
 launch_simulation
-close_sim
-launch_simulation
-source bcd_counter_tb.tcl
-close_sim
-launch_simulation
-source bcd_counter_tb.tcl
-close_sim
-launch_simulation
-source bcd_counter_tb.tcl
-current_wave_config {Untitled 4}
-add_wave {{/bcd_counter_tb/bcd_counter_i/cnt_0_reg}} 
-current_wave_config {Untitled 4}
-add_wave {{/bcd_counter_tb/bcd_counter_i/cnt_1_reg}} 
-current_wave_config {Untitled 4}
-add_wave {{/bcd_counter_tb/bcd_counter_i/cnt_2_reg}} 
-current_wave_config {Untitled 4}
-add_wave {{/bcd_counter_tb/bcd_counter_i/cnt_3_reg}} 
+source stopwatch_fsm_tb.tcl
+current_wave_config {Untitled 2}
+add_wave {{/stopwatch_fsm_tb/stopwatch_fsm_i/current_state}} 
+current_wave_config {Untitled 2}
+add_wave {{/stopwatch_fsm_tb/stopwatch_fsm_i/next_state}} 
 relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-close_sim
-launch_simulation
-source bcd_counter_tb.tcl
-relaunch_sim
-close_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
 # Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
 set_property source_mgmt_mode None [current_project]
 set_property top btn_in_tb [get_filesets sim_1]
@@ -66,26 +40,18 @@ set_property top_lib xil_defaultlib [get_filesets sim_1]
 # Re-enabling previously disabled source management mode.
 set_property source_mgmt_mode All [current_project]
 update_compile_order -fileset sim_1
-launch_simulation
-source btn_in_tb.tcl
 close_sim
+reset_simulation -simset sim_1 -mode behavioral
 launch_simulation
-source btn_in_tb.tcl
-current_wave_config {Untitled 7}
-add_wave {{/btn_in_tb/btn_in_i/debouncer_i/debounce_cnt}} 
-current_wave_config {Untitled 7}
-add_wave {{/btn_in_tb/btn_in_i/debouncer_i/input_state}} 
-current_wave_config {Untitled 7}
-add_wave {{/btn_in_tb/btn_in_i/debouncer_i/BTN_OUT}} 
-current_wave_config {Untitled 7}
-add_wave {{/btn_in_tb/btn_in_i/debouncer_i/BTN_IN}} 
-current_wave_config {Untitled 7}
-add_wave {{/btn_in_tb/btn_in_i/debouncer_i/G_DEB_PERIOD}} 
-relaunch_sim
-relaunch_sim
-relaunch_sim
-current_wave_config {Untitled 7}
-add_wave {{/btn_in_tb/btn_in_i/sync_reg_i/SIG_OUT}} 
-relaunch_sim
-relaunch_sim
-close_sim
+launch_simulation
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {P:/PLD_VHDL/STOPWATCH/Stopwatch.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {P:/PLD_VHDL/STOPWATCH/Stopwatch.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]

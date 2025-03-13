@@ -2,10 +2,10 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Mar 13 09:30:26 2025
-# Process ID: 8412
+# Start of session at: Thu Mar 13 09:03:00 2025
+# Process ID: 5764
 # Current directory: P:/PLD_VHDL/STOPWATCH
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5152 P:\PLD_VHDL\STOPWATCH\Stopwatch.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7960 P:\PLD_VHDL\STOPWATCH\Stopwatch.xpr
 # Log file: P:/PLD_VHDL/STOPWATCH/vivado.log
 # Journal file: P:/PLD_VHDL/STOPWATCH\vivado.jou
 # Running On: PC-077, OS: Windows, CPU Frequency: 3293 MHz, CPU Physical cores: 4, Host memory: 4160 MB
@@ -70,72 +70,14 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/appz/Xilinx/Vivado/2022.1/data/ip'.
-open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:10 . Memory (MB): peak = 1554.906 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 1222.055 ; gain = 0.000
 update_compile_order -fileset sources_1
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'ce_gen_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/appz/Xilinx/Vivado/2022.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'ce_gen_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj ce_gen_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/PLD_VHDL/STOPWATCH/SOURCES/ce_gen.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'ce_gen'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/PLD_VHDL/STOPWATCH/SOURCES/SIM/ce_gen_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'ce_gen_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ce_gen_tb_behav xil_defaultlib.ce_gen_tb -log elaborate.log"
-Vivado Simulator v2022.1
-Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/appz/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ce_gen_tb_behav xil_defaultlib.ce_gen_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.ce_gen [\ce_gen(g_div_fact=5)\]
-Compiling architecture behavioral of entity xil_defaultlib.ce_gen_tb
-Built simulation snapshot ce_gen_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "ce_gen_tb_behav -key {Behavioral:sim_1:Functional:ce_gen_tb} -tclbatch {ce_gen_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-source ce_gen_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run all
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'ce_gen_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for -all
-launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1554.906 ; gain = 0.000
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-set_property top stopwatch_fsm_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-update_compile_order -fileset sim_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Mar 13 09:03:59 2025] Launched synth_1...
+Run output will be captured here: P:/PLD_VHDL/STOPWATCH/Stopwatch.runs/synth_1/runme.log
+[Thu Mar 13 09:04:00 2025] Launched impl_1...
+Run output will be captured here: P:/PLD_VHDL/STOPWATCH/Stopwatch.runs/impl_1/runme.log
+reset_run impl_1
 launch_simulation
 Command: launch_simulation 
 INFO: [Vivado 12-12493] Simulation top is 'stopwatch_fsm_tb'
@@ -152,9 +94,7 @@ INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'P:/PLD_VHDL/STOPWAT
 "xvhdl --incr --relax -prj stopwatch_fsm_tb_vhdl.prj"
 INFO: [VRFC 10-163] Analyzing VHDL file "P:/PLD_VHDL/STOPWATCH/SOURCES/stopwatch_fsm.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'stopwatch_fsm'
-INFO: [VRFC 10-163] Analyzing VHDL file "P:/PLD_VHDL/STOPWATCH/SOURCES/stopwatch_fsm_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'stopwatch_fsm_tb'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim'
 "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot stopwatch_fsm_tb_behav xil_defaultlib.stopwatch_fsm_tb -log elaborate.log"
@@ -194,12 +134,12 @@ source stopwatch_fsm_tb.tcl
 # run all
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'stopwatch_fsm_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for -all
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1554.906 ; gain = 0.000
-current_wave_config {Untitled 2}
-Untitled 2
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1222.055 ; gain = 0.000
+current_wave_config {Untitled 1}
+Untitled 1
 add_wave {{/stopwatch_fsm_tb/stopwatch_fsm_i/current_state}} 
-current_wave_config {Untitled 2}
-Untitled 2
+current_wave_config {Untitled 1}
+Untitled 1
 add_wave {{/stopwatch_fsm_tb/stopwatch_fsm_i/next_state}} 
 relaunch_sim
 Command: launch_simulation -step compile -simset sim_1 -mode behavioral
@@ -234,39 +174,59 @@ Completed static elaboration
 INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
 INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
 Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1554.906 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1222.055 ; gain = 0.000
+add_bp {P:/PLD_VHDL/STOPWATCH/SOURCES/stopwatch_fsm.vhd} 37
+remove_bps -file {P:/PLD_VHDL/STOPWATCH/SOURCES/stopwatch_fsm.vhd} -line 37
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'stopwatch_fsm_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj stopwatch_fsm_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "P:/PLD_VHDL/STOPWATCH/SOURCES/stopwatch_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'stopwatch_fsm'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'stopwatch_fsm_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot stopwatch_fsm_tb_behav xil_defaultlib.stopwatch_fsm_tb -log elaborate.log"
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot stopwatch_fsm_tb_behav xil_defaultlib.stopwatch_fsm_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.stopwatch_fsm [stopwatch_fsm_default]
+Compiling architecture behavioral of entity xil_defaultlib.stopwatch_fsm_tb
+Built simulation snapshot stopwatch_fsm_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1222.055 ; gain = 0.000
 reset_run synth_1
 WARNING: [Vivado 12-1017] Problems encountered:
 1. Failed to delete one or more files in run directory P:/PLD_VHDL/STOPWATCH/Stopwatch.runs/synth_1
 
 launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Thu Mar 13 09:35:36 2025] Launched synth_1...
+[Thu Mar 13 09:16:34 2025] Launched synth_1...
 Run output will be captured here: P:/PLD_VHDL/STOPWATCH/Stopwatch.runs/synth_1/runme.log
-[Thu Mar 13 09:35:36 2025] Launched impl_1...
+[Thu Mar 13 09:16:34 2025] Launched impl_1...
 Run output will be captured here: P:/PLD_VHDL/STOPWATCH/Stopwatch.runs/impl_1/runme.log
-set_property top btn_in_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-update_compile_order -fileset sim_1
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-reset_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-2266] Removing simulation data...
-WARNING: [Vivado 12-3661] Failed to remove file:P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/simulate.log
-WARNING: [Vivado 12-3661] Failed to remove file:P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/stopwatch_fsm_tb_behav.wdb
-WARNING: [Vivado 12-3661] Failed to remove file:P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/xsim.dir/stopwatch_fsm_tb_behav/xsim.xdbg
-WARNING: [Vivado 12-4421] Failed to remove directory:P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/xsim.dir/stopwatch_fsm_tb_behav
-WARNING: [Vivado 12-4421] Failed to remove directory:P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/xsim.dir
-INFO: [Vivado 12-2267] Reset complete
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'btn_in_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-boost::filesystem::remove: The process cannot access the file because it is being used by another process: "P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/simulate.log"
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'btn_in_tb'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-boost::filesystem::remove: The process cannot access the file because it is being used by another process: "P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/simulate.log"
 open_hw_manager
 connect_hw_server -allow_non_jtag
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
@@ -290,10 +250,10 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 
-connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1554.906 ; gain = 0.000
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1222.055 ; gain = 0.000
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210308A64E03
-open_hw_target: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 3203.578 ; gain = 1648.672
+open_hw_target: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 3205.828 ; gain = 1983.773
 set_property PROGRAM.FILE {P:/PLD_VHDL/STOPWATCH/Stopwatch.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
 current_hw_device [get_hw_devices xc7z010_1]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
@@ -305,5 +265,74 @@ program_hw_devices [get_hw_devices xc7z010_1]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
 INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory P:/PLD_VHDL/STOPWATCH/Stopwatch.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Mar 13 09:20:45 2025] Launched synth_1...
+Run output will be captured here: P:/PLD_VHDL/STOPWATCH/Stopwatch.runs/synth_1/runme.log
+[Thu Mar 13 09:20:45 2025] Launched impl_1...
+Run output will be captured here: P:/PLD_VHDL/STOPWATCH/Stopwatch.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {P:/PLD_VHDL/STOPWATCH/Stopwatch.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property top ce_gen_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'ce_gen_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'ce_gen_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'ce_gen_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'ce_gen_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/simulate.log"
+reset_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-2266] Removing simulation data...
+WARNING: [Vivado 12-3661] Failed to remove file:P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/simulate.log
+WARNING: [Vivado 12-3661] Failed to remove file:P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/stopwatch_fsm_tb_behav.wdb
+WARNING: [Vivado 12-3661] Failed to remove file:P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/xsim.dir/stopwatch_fsm_tb_behav/xsim.xdbg
+WARNING: [Vivado 12-4421] Failed to remove directory:P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/xsim.dir/stopwatch_fsm_tb_behav
+WARNING: [Vivado 12-4421] Failed to remove directory:P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/xsim.dir
+INFO: [Vivado 12-2267] Reset complete
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'ce_gen_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'ce_gen_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'ce_gen_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'ce_gen_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "P:/PLD_VHDL/STOPWATCH/Stopwatch.sim/sim_1/behav/xsim/simulate.log"
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 13 09:41:19 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 13 09:29:09 2025...
