@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Mar 20 10:14:02 2025
+# Process ID: 9888
+# Current directory: P:/PLD_VHDL/UART_TX
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6168 P:\PLD_VHDL\UART_TX\UART_TX.xpr
+# Log file: P:/PLD_VHDL/UART_TX/vivado.log
+# Journal file: P:/PLD_VHDL/UART_TX\vivado.jou
+# Running On: PC-077, OS: Windows, CPU Frequency: 3293 MHz, CPU Physical cores: 4, Host memory: 4160 MB
+#-----------------------------------------------------------
+start_gui
+open_project P:/PLD_VHDL/UART_TX/UART_TX.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source uart_tx_tb.tcl
+current_wave_config {Untitled 1}
+add_wave {{/uart_tx_tb/uart_tx_i/pres_st}} 
+current_wave_config {Untitled 1}
+add_wave {{/uart_tx_tb/uart_tx_i/next_st}} 
+relaunch_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {P:/PLD_VHDL/UART_TX/UART_TX.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {P:/PLD_VHDL/UART_TX/UART_TX.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {P:/PLD_VHDL/UART_TX/UART_TX.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {P:/PLD_VHDL/UART_TX/UART_TX.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+relaunch_sim
+close_sim
