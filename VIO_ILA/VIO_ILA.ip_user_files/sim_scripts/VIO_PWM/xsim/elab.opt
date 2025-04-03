@@ -1,0 +1,1 @@
+--incr --debug typical --relax --mt auto -L xil_defaultlib -L secureip -L xpm --snapshot VIO_PWM xil_defaultlib.VIO_PWM -log elaborate.log

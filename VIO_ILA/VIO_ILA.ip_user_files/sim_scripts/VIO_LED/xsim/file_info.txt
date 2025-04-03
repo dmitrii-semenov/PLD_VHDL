@@ -1,0 +1,2 @@
+VIO_LED.vhd,vhdl,xil_defaultlib,../../../../SOURCES/VIO_LED/sim/VIO_LED.vhd,incdir="../../../../SOURCES/VIO_LED/hdl/verilog"incdir="../../../../SOURCES/VIO_LED/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

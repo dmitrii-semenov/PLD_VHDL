@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../SOURCES/VIO_LED/sim/VIO_LED.vhd" \
+
+nosort

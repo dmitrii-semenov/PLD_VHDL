@@ -1,0 +1,1 @@
+--incr --debug typical --relax --mt auto -L xil_defaultlib -L secureip -L xpm --snapshot ILA_PWM xil_defaultlib.ILA_PWM -log elaborate.log

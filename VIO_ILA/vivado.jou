@@ -1,0 +1,287 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Apr  3 08:17:08 2025
+# Process ID: 10892
+# Current directory: C:/Users/240689/VIO_ILA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent832 C:\Users\240689\VIO_ILA\VIO_ILA.xpr
+# Log file: C:/Users/240689/VIO_ILA/vivado.log
+# Journal file: C:/Users/240689/VIO_ILA\vivado.jou
+# Running On: PC-077, OS: Windows, CPU Frequency: 3293 MHz, CPU Physical cores: 4, Host memory: 4160 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/240689/VIO_ILA/VIO_ILA.xpr
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/Users/240689/VIO_ILA/SOURCES/pkg_constants.vhd C:/Users/240689/VIO_ILA/SOURCES/pkg_types.vhd}
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top pwm_driver_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source pwm_driver_tb.tcl
+update_compile_order -fileset sim_1
+set_property -name {xsim.simulate.runtime} -value {-all} -objects [get_filesets sim_1]
+relaunch_sim
+close_sim
+launch_simulation
+source pwm_driver_tb.tcl
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ILA_PWM -dir C:/Users/240689/VIO_ILA/IP
+set_property -dict [list CONFIG.C_PROBE1_WIDTH {8} CONFIG.C_PROBE0_WIDTH {8} CONFIG.C_NUM_OF_PROBES {2} CONFIG.Component_Name {ILA_PWM} CONFIG.C_EN_STRG_QUAL {1} CONFIG.C_INPUT_PIPE_STAGES {1} CONFIG.C_ADV_TRIGGER {true} CONFIG.C_PROBE1_MU_CNT {2} CONFIG.C_PROBE0_MU_CNT {2} CONFIG.ALL_PROBE_SAME_MU_CNT {2}] [get_ips ILA_PWM]
+generate_target {instantiation_template} [get_files c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci]
+catch { config_ip_cache -export [get_ips -all ILA_PWM] }
+export_ip_user_files -of_objects [get_files c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci]
+launch_runs ILA_PWM_synth_1 -jobs 4
+wait_on_run ILA_PWM_synth_1
+wait_on_run ILA_PWM_synth_1
+export_ip_user_files -of_objects  [get_files c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci] -no_script -reset -force -quiet
+remove_files  -fileset ILA_PWM c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ILA_PWM -dir C:/Users/240689/VIO_ILA/IP
+set_property -dict [list CONFIG.C_PROBE1_WIDTH {8} CONFIG.C_PROBE0_WIDTH {8} CONFIG.C_NUM_OF_PROBES {2} CONFIG.Component_Name {ILA_PWM} CONFIG.C_EN_STRG_QUAL {1} CONFIG.C_INPUT_PIPE_STAGES {1} CONFIG.C_ADV_TRIGGER {true} CONFIG.C_PROBE1_MU_CNT {2} CONFIG.C_PROBE0_MU_CNT {2} CONFIG.ALL_PROBE_SAME_MU_CNT {2}] [get_ips ILA_PWM]
+generate_target {instantiation_template} [get_files c:/Users/240689/VIO_ILA/IP/ILA_PWM_1/ILA_PWM.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  c:/Users/240689/VIO_ILA/IP/ILA_PWM_1/ILA_PWM.xci]
+catch { config_ip_cache -export [get_ips -all ILA_PWM] }
+export_ip_user_files -of_objects [get_files c:/Users/240689/VIO_ILA/IP/ILA_PWM_1/ILA_PWM.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/240689/VIO_ILA/IP/ILA_PWM_1/ILA_PWM.xci]
+launch_runs ILA_PWM_synth_1 -jobs 4
+wait_on_run ILA_PWM_synth_1
+wait_on_run ILA_PWM_synth_1
+export_ip_user_files -of_objects  [get_files c:/Users/240689/VIO_ILA/IP/ILA_PWM_1/ILA_PWM.xci] -no_script -reset -force -quiet
+remove_files  -fileset ILA_PWM c:/Users/240689/VIO_ILA/IP/ILA_PWM_1/ILA_PWM.xci
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_0 -dir C:/Users/240689/VIO_ILA/IP
+set_property -dict [list CONFIG.C_PROBE1_WIDTH {8} CONFIG.C_PROBE0_WIDTH {8} CONFIG.C_NUM_OF_PROBES {2} CONFIG.C_EN_STRG_QUAL {1} CONFIG.C_INPUT_PIPE_STAGES {1} CONFIG.C_ADV_TRIGGER {true} CONFIG.C_PROBE1_MU_CNT {2} CONFIG.C_PROBE0_MU_CNT {2} CONFIG.ALL_PROBE_SAME_MU_CNT {2}] [get_ips ila_0]
+generate_target {instantiation_template} [get_files c:/Users/240689/VIO_ILA/IP/ila_0/ila_0.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  c:/Users/240689/VIO_ILA/IP/ila_0/ila_0.xci]
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files c:/Users/240689/VIO_ILA/IP/ila_0/ila_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/240689/VIO_ILA/IP/ila_0/ila_0.xci]
+launch_runs ila_0_synth_1 -jobs 4
+wait_on_run ila_0_synth_1
+wait_on_run ila_0_synth_1
+export_ip_user_files -of_objects  [get_files c:/Users/240689/VIO_ILA/IP/ila_0/ila_0.xci] -no_script -reset -force -quiet
+remove_files  -fileset ila_0 c:/Users/240689/VIO_ILA/IP/ila_0/ila_0.xci
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ILA_PWM -dir C:/Users/240689/VIO_ILA/IP
+set_property -dict [list CONFIG.C_PROBE1_WIDTH {8} CONFIG.C_PROBE0_WIDTH {8} CONFIG.C_NUM_OF_PROBES {2} CONFIG.Component_Name {ILA_PWM} CONFIG.C_EN_STRG_QUAL {1} CONFIG.C_INPUT_PIPE_STAGES {1} CONFIG.C_ADV_TRIGGER {true} CONFIG.C_PROBE1_MU_CNT {2} CONFIG.C_PROBE0_MU_CNT {2} CONFIG.ALL_PROBE_SAME_MU_CNT {2}] [get_ips ILA_PWM]
+generate_target {instantiation_template} [get_files c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci]
+generate_target all [get_files  c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci]
+catch { config_ip_cache -export [get_ips -all ILA_PWM] }
+export_ip_user_files -of_objects [get_files c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci]
+launch_runs ILA_PWM_synth_1 -jobs 4
+wait_on_run ILA_PWM_synth_1
+wait_on_run ILA_PWM_synth_1
+export_simulation -of_objects [get_files c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci] -directory C:/Users/240689/VIO_ILA/VIO_ILA.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/240689/VIO_ILA/VIO_ILA.ip_user_files -ipstatic_source_dir C:/Users/240689/VIO_ILA/VIO_ILA.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/modelsim} {questa=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/questa} {riviera=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/riviera} {activehdl=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name vio -vendor xilinx.com -library ip -version 3.0 -module_name VIO_PWM -dir C:/Users/240689/VIO_ILA/IP
+set_property -dict [list CONFIG.C_PROBE_OUT7_WIDTH {8} CONFIG.C_PROBE_OUT6_WIDTH {8} CONFIG.C_PROBE_OUT5_WIDTH {8} CONFIG.C_PROBE_OUT4_WIDTH {8} CONFIG.C_PROBE_OUT3_WIDTH {8} CONFIG.C_PROBE_OUT2_WIDTH {8} CONFIG.C_PROBE_OUT1_WIDTH {8} CONFIG.C_PROBE_OUT0_WIDTH {8} CONFIG.C_PROBE_IN1_WIDTH {8} CONFIG.C_PROBE_IN0_WIDTH {8} CONFIG.C_NUM_PROBE_OUT {8} CONFIG.C_EN_PROBE_IN_ACTIVITY {0} CONFIG.C_NUM_PROBE_IN {2} CONFIG.Component_Name {VIO_PWM}] [get_ips VIO_PWM]
+generate_target {instantiation_template} [get_files c:/Users/240689/VIO_ILA/IP/VIO_PWM/VIO_PWM.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  c:/Users/240689/VIO_ILA/IP/VIO_PWM/VIO_PWM.xci]
+catch { config_ip_cache -export [get_ips -all VIO_PWM] }
+export_ip_user_files -of_objects [get_files c:/Users/240689/VIO_ILA/IP/VIO_PWM/VIO_PWM.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/240689/VIO_ILA/IP/VIO_PWM/VIO_PWM.xci]
+launch_runs VIO_PWM_synth_1 -jobs 4
+wait_on_run VIO_PWM_synth_1
+wait_on_run VIO_PWM_synth_1
+export_simulation -of_objects [get_files c:/Users/240689/VIO_ILA/IP/VIO_PWM/VIO_PWM.xci] -directory C:/Users/240689/VIO_ILA/VIO_ILA.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/240689/VIO_ILA/VIO_ILA.ip_user_files -ipstatic_source_dir C:/Users/240689/VIO_ILA/VIO_ILA.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/modelsim} {questa=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/questa} {riviera=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/riviera} {activehdl=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.C_PROBE7_WIDTH {8} CONFIG.C_PROBE6_WIDTH {8} CONFIG.C_PROBE5_WIDTH {8} CONFIG.C_PROBE4_WIDTH {8} CONFIG.C_PROBE3_WIDTH {8} CONFIG.C_PROBE2_WIDTH {8} CONFIG.C_NUM_OF_PROBES {8} CONFIG.C_PROBE7_MU_CNT {2} CONFIG.C_PROBE6_MU_CNT {2} CONFIG.C_PROBE5_MU_CNT {2} CONFIG.C_PROBE4_MU_CNT {2} CONFIG.C_PROBE3_MU_CNT {2} CONFIG.C_PROBE2_MU_CNT {2}] [get_ips ILA_PWM]
+generate_target all [get_files  c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci]
+catch { config_ip_cache -export [get_ips -all ILA_PWM] }
+export_ip_user_files -of_objects [get_files c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci] -no_script -sync -force -quiet
+reset_run ILA_PWM_synth_1
+launch_runs ILA_PWM_synth_1 -jobs 4
+wait_on_run ILA_PWM_synth_1
+wait_on_run ILA_PWM_synth_1
+export_simulation -of_objects [get_files c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci] -directory C:/Users/240689/VIO_ILA/VIO_ILA.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/240689/VIO_ILA/VIO_ILA.ip_user_files -ipstatic_source_dir C:/Users/240689/VIO_ILA/VIO_ILA.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/modelsim} {questa=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/questa} {riviera=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/riviera} {activehdl=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.C_PROBE7_WIDTH {1} CONFIG.C_PROBE6_WIDTH {1} CONFIG.C_PROBE5_WIDTH {1} CONFIG.C_PROBE4_WIDTH {1} CONFIG.C_PROBE3_WIDTH {1} CONFIG.C_PROBE2_WIDTH {1} CONFIG.C_NUM_OF_PROBES {2}] [get_ips ILA_PWM]
+generate_target all [get_files  c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci]
+catch { config_ip_cache -export [get_ips -all ILA_PWM] }
+export_ip_user_files -of_objects [get_files c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci] -no_script -sync -force -quiet
+reset_run ILA_PWM_synth_1
+launch_runs ILA_PWM_synth_1 -jobs 4
+wait_on_run ILA_PWM_synth_1
+wait_on_run ILA_PWM_synth_1
+export_simulation -of_objects [get_files c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM.xci] -directory C:/Users/240689/VIO_ILA/VIO_ILA.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/240689/VIO_ILA/VIO_ILA.ip_user_files -ipstatic_source_dir C:/Users/240689/VIO_ILA/VIO_ILA.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/modelsim} {questa=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/questa} {riviera=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/riviera} {activehdl=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name vio -vendor xilinx.com -library ip -version 3.0 -module_name VIO_LED -dir C:/Users/240689/VIO_ILA/SOURCES
+set_property -dict [list CONFIG.C_PROBE_OUT5_WIDTH {3} CONFIG.C_PROBE_OUT4_WIDTH {4} CONFIG.C_PROBE_OUT3_WIDTH {4} CONFIG.C_PROBE_OUT2_WIDTH {4} CONFIG.C_PROBE_OUT1_WIDTH {4} CONFIG.C_PROBE_OUT0_WIDTH {4} CONFIG.C_PROBE_IN1_WIDTH {5} CONFIG.C_PROBE_IN0_WIDTH {8} CONFIG.C_NUM_PROBE_OUT {4} CONFIG.C_NUM_PROBE_IN {2} CONFIG.Component_Name {VIO_LED}] [get_ips VIO_LED]
+generate_target {instantiation_template} [get_files c:/Users/240689/VIO_ILA/SOURCES/VIO_LED/VIO_LED.xci]
+generate_target all [get_files  c:/Users/240689/VIO_ILA/SOURCES/VIO_LED/VIO_LED.xci]
+catch { config_ip_cache -export [get_ips -all VIO_LED] }
+export_ip_user_files -of_objects [get_files c:/Users/240689/VIO_ILA/SOURCES/VIO_LED/VIO_LED.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/240689/VIO_ILA/SOURCES/VIO_LED/VIO_LED.xci]
+launch_runs VIO_LED_synth_1 -jobs 4
+wait_on_run VIO_LED_synth_1
+wait_on_run VIO_LED_synth_1
+export_simulation -of_objects [get_files c:/Users/240689/VIO_ILA/SOURCES/VIO_LED/VIO_LED.xci] -directory C:/Users/240689/VIO_ILA/VIO_ILA.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/240689/VIO_ILA/VIO_ILA.ip_user_files -ipstatic_source_dir C:/Users/240689/VIO_ILA/VIO_ILA.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/modelsim} {questa=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/questa} {riviera=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/riviera} {activehdl=C:/Users/240689/VIO_ILA/VIO_ILA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/240689/VIO_ILA/VIO_ILA.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+set_property PROBES.FILE {C:/Users/240689/VIO_ILA/VIO_ILA.runs/impl_1/rp_top.ltx} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {C:/Users/240689/VIO_ILA/VIO_ILA.runs/impl_1/rp_top.ltx} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {C:/Users/240689/VIO_ILA/VIO_ILA.runs/impl_1/rp_top.ltx} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {C:/Users/240689/VIO_ILA/VIO_ILA.runs/impl_1/rp_top.ltx} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/240689/VIO_ILA/VIO_ILA.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+set_property OUTPUT_VALUE 5 [get_hw_probes DIG_1_S -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+commit_hw_vio [get_hw_probes {DIG_1_S} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+set_property OUTPUT_VALUE 5 [get_hw_probes DIG_1_S -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+commit_hw_vio [get_hw_probes {DIG_1_S} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+set_property OUTPUT_VALUE 1 [get_hw_probes DIG_1_S -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes DIG_1_S -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+commit_hw_vio [get_hw_probes {DIG_1_S DIG_1_S} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+set_property OUTPUT_VALUE 4 [get_hw_probes DIG_1_S -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+commit_hw_vio [get_hw_probes {DIG_1_S} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes DIG_1_S -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+commit_hw_vio [get_hw_probes {DIG_1_S} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+set_property OUTPUT_VALUE 99 [get_hw_probes PWM_REF_3 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+commit_hw_vio [get_hw_probes {PWM_REF_3} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+set_property OUTPUT_VALUE 32 [get_hw_probes PWM_REF_4 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+commit_hw_vio [get_hw_probes {PWM_REF_4} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+set_property OUTPUT_VALUE 00 [get_hw_probes PWM_REF_4 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+commit_hw_vio [get_hw_probes {PWM_REF_4} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+set_property OUTPUT_VALUE 00 [get_hw_probes PWM_REF_3 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+commit_hw_vio [get_hw_probes {PWM_REF_3} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+set_property OUTPUT_VALUE 1 [get_hw_probes DIG_2_S -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+commit_hw_vio [get_hw_probes {DIG_2_S} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+set_property OUTPUT_VALUE 1 [get_hw_probes DIG_3_S -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+commit_hw_vio [get_hw_probes {DIG_3_S} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+save_wave_config {C:/Users/240689/VIO_ILA/VIO_ILA.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+set_property TRIGGER_COMPARE_VALUE eq8'h00 [get_hw_probes cnt_out_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+set_property TRIGGER_COMPARE_VALUE eq8'hFF [get_hw_probes cnt_out_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+set_property CONTROL.CAPTURE_MODE BASIC [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+set_property OUTPUT_VALUE FF [get_hw_probes PWM_REF_1 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+commit_hw_vio [get_hw_probes {PWM_REF_1} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+set_property OUTPUT_VALUE 00 [get_hw_probes PWM_REF_1 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+commit_hw_vio [get_hw_probes {PWM_REF_1} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+set_property OUTPUT_VALUE FF [get_hw_probes PWM_REF_0 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+commit_hw_vio [get_hw_probes {PWM_REF_0} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+set_property OUTPUT_VALUE 99 [get_hw_probes PWM_REF_0 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+commit_hw_vio [get_hw_probes {PWM_REF_0} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+set_property TRIGGER_COMPARE_VALUE eq8'h11 [get_hw_probes cnt_out_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+set_property CAPTURE_COMPARE_VALUE eq8'h11 [get_hw_probes cnt_out_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+set_property CAPTURE_COMPARE_VALUE eq8'hDD [get_hw_probes cnt_out_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+set_property TRIGGER_COMPARE_VALUE eq8'h01 [get_hw_probes BTN_S -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+set_property CONTROL.CAPTURE_MODE BASIC [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+set_property CAPTURE_COMPARE_VALUE eq8'h01 [get_hw_probes BTN_S -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+set_property OUTPUT_VALUE FF [get_hw_probes PWM_REF_4 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+commit_hw_vio [get_hw_probes {PWM_REF_4} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+set_property OUTPUT_VALUE 11 [get_hw_probes PWM_REF_3 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+commit_hw_vio [get_hw_probes {PWM_REF_3} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+set_property CAPTURE_COMPARE_VALUE eq8'hXX [get_hw_probes BTN_S -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+set_property TRIGGER_COMPARE_VALUE eq8'b0000_0001 [get_hw_probes BTN_S -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+set_property TRIGGER_COMPARE_VALUE eq8'b0000_000F [get_hw_probes BTN_S -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/240689/VIO_ILA/VIO_ILA.runs/impl_1/rp_top.ltx} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {C:/Users/240689/VIO_ILA/VIO_ILA.runs/impl_1/rp_top.ltx} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/240689/VIO_ILA/VIO_ILA.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+save_wave_config {C:/Users/240689/VIO_ILA/VIO_ILA.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {C:/Users/240689/VIO_ILA/VIO_ILA.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {C:/Users/240689/VIO_ILA/VIO_ILA.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {C:/Users/240689/VIO_ILA/VIO_ILA.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+set_property OUTPUT_VALUE 00 [get_hw_probes PWM_REF_0 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+commit_hw_vio [get_hw_probes {PWM_REF_0} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+set_property OUTPUT_VALUE 99 [get_hw_probes PWM_REF_0 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+commit_hw_vio [get_hw_probes {PWM_REF_0} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+set_property OUTPUT_VALUE 00 [get_hw_probes PWM_REF_0 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+commit_hw_vio [get_hw_probes {PWM_REF_0} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+set_property OUTPUT_VALUE 5 [get_hw_probes DIG_1 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+commit_hw_vio [get_hw_probes {DIG_1} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes DIG_1 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+commit_hw_vio [get_hw_probes {DIG_1} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+set_property OUTPUT_VALUE 7 [get_hw_probes DIG_3 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+commit_hw_vio [get_hw_probes {DIG_3} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes DIG_3 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+commit_hw_vio [get_hw_probes {DIG_3} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+save_wave_config {C:/Users/240689/VIO_ILA/VIO_ILA.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {C:/Users/240689/VIO_ILA/VIO_ILA.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {C:/Users/240689/VIO_ILA/VIO_ILA.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {C:/Users/240689/VIO_ILA/VIO_ILA.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+set_property TRIGGER_COMPARE_VALUE eq8'hXX [get_hw_probes BTN_S -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+set_property TRIGGER_COMPARE_VALUE eq8'h01 [get_hw_probes BTN_S -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+save_wave_config {C:/Users/240689/VIO_ILA/VIO_ILA.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {C:/Users/240689/VIO_ILA/VIO_ILA.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {C:/Users/240689/VIO_ILA/VIO_ILA.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {C:/Users/240689/VIO_ILA/VIO_ILA.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {C:/Users/240689/VIO_ILA/VIO_ILA.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+set_property CAPTURE_COMPARE_VALUE eq8'hXX [get_hw_probes cnt_out_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+set_property TRIGGER_COMPARE_VALUE eq8'u17 [get_hw_probes cnt_out_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+set_property TRIGGER_COMPARE_VALUE eq8'u100 [get_hw_probes cnt_out_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_in"}]]
+set_property OUTPUT_VALUE 5 [get_hw_probes DIG_3 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+commit_hw_vio [get_hw_probes {DIG_3} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_disp"}]]
+set_property OUTPUT_VALUE 01 [get_hw_probes PWM_REF_3 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+commit_hw_vio [get_hw_probes {PWM_REF_3} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+set_property OUTPUT_VALUE 99 [get_hw_probes PWM_REF_3 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+commit_hw_vio [get_hw_probes {PWM_REF_3} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"vio_out"}]]
+set_property TRIGGER_COMPARE_VALUE eq8'u10 [get_hw_probes cnt_out_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_out"}]]

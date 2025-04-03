@@ -1,0 +1,288 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Apr  3 09:52:23 2025
+# Process ID: 3524
+# Current directory: C:/Users/240689/VIO_ILA/VIO_ILA.runs/synth_1
+# Command line: vivado.exe -log rp_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rp_top.tcl
+# Log file: C:/Users/240689/VIO_ILA/VIO_ILA.runs/synth_1/rp_top.vds
+# Journal file: C:/Users/240689/VIO_ILA/VIO_ILA.runs/synth_1\vivado.jou
+# Running On: PC-077, OS: Windows, CPU Frequency: 3293 MHz, CPU Physical cores: 4, Host memory: 4160 MB
+#-----------------------------------------------------------
+source rp_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1264.738 ; gain = 0.000
+Command: synth_design -top rp_top -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1288
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1264.738 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'rp_top' [C:/Users/240689/VIO_ILA/SOURCES/rp_top.vhd:16]
+INFO: [Synth 8-3491] module 'VIO_PWM' declared at 'C:/Users/240689/VIO_ILA/VIO_ILA.runs/synth_1/.Xil/Vivado-3524-PC-077/realtime/VIO_PWM_stub.vhdl:5' bound to instance 'vio_out' of component 'VIO_PWM' [C:/Users/240689/VIO_ILA/SOURCES/rp_top.vhd:156]
+INFO: [Synth 8-638] synthesizing module 'VIO_PWM' [C:/Users/240689/VIO_ILA/VIO_ILA.runs/synth_1/.Xil/Vivado-3524-PC-077/realtime/VIO_PWM_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'VIO_LED' declared at 'C:/Users/240689/VIO_ILA/VIO_ILA.runs/synth_1/.Xil/Vivado-3524-PC-077/realtime/VIO_LED_stub.vhdl:5' bound to instance 'vio_disp' of component 'VIO_LED' [C:/Users/240689/VIO_ILA/SOURCES/rp_top.vhd:171]
+INFO: [Synth 8-638] synthesizing module 'VIO_LED' [C:/Users/240689/VIO_ILA/VIO_ILA.runs/synth_1/.Xil/Vivado-3524-PC-077/realtime/VIO_LED_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'ILA_PWM' declared at 'C:/Users/240689/VIO_ILA/VIO_ILA.runs/synth_1/.Xil/Vivado-3524-PC-077/realtime/ILA_PWM_stub.vhdl:5' bound to instance 'ila_out' of component 'ILA_PWM' [C:/Users/240689/VIO_ILA/SOURCES/rp_top.vhd:184]
+INFO: [Synth 8-638] synthesizing module 'ILA_PWM' [C:/Users/240689/VIO_ILA/VIO_ILA.runs/synth_1/.Xil/Vivado-3524-PC-077/realtime/ILA_PWM_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'ILA_PWM' declared at 'C:/Users/240689/VIO_ILA/VIO_ILA.runs/synth_1/.Xil/Vivado-3524-PC-077/realtime/ILA_PWM_stub.vhdl:5' bound to instance 'ila_in' of component 'ILA_PWM' [C:/Users/240689/VIO_ILA/SOURCES/rp_top.vhd:194]
+INFO: [Synth 8-3491] module 'seg_disp_driver' declared at 'C:/Users/240689/VIO_ILA/VIO_ILA.runs/synth_1/.Xil/Vivado-3524-PC-077/realtime/seg_disp_driver_stub.vhdl:5' bound to instance 'seg_disp_driver_i' of component 'seg_disp_driver' [C:/Users/240689/VIO_ILA/SOURCES/rp_top.vhd:203]
+INFO: [Synth 8-638] synthesizing module 'seg_disp_driver' [C:/Users/240689/VIO_ILA/VIO_ILA.runs/synth_1/.Xil/Vivado-3524-PC-077/realtime/seg_disp_driver_stub.vhdl:20]
+	Parameter G_DIV_FACT bound to: 500000 - type: integer 
+INFO: [Synth 8-3491] module 'ce_gen' declared at 'C:/Users/240689/VIO_ILA/SOURCES/ce_gen.vhd:6' bound to instance 'ce_gen_i' of component 'ce_gen' [C:/Users/240689/VIO_ILA/SOURCES/rp_top.vhd:223]
+INFO: [Synth 8-638] synthesizing module 'ce_gen' [C:/Users/240689/VIO_ILA/SOURCES/ce_gen.vhd:18]
+	Parameter G_DIV_FACT bound to: 500000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ce_gen' (0#1) [C:/Users/240689/VIO_ILA/SOURCES/ce_gen.vhd:18]
+	Parameter G_DEB_PERIOD bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'btn_in' declared at 'C:/Users/240689/VIO_ILA/SOURCES/btn_in.vhd:5' bound to instance 'btn_in_i' of component 'btn_in' [C:/Users/240689/VIO_ILA/SOURCES/rp_top.vhd:239]
+INFO: [Synth 8-638] synthesizing module 'btn_in' [C:/Users/240689/VIO_ILA/SOURCES/btn_in.vhd:20]
+	Parameter G_DEB_PERIOD bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'sync_reg' declared at 'C:/Users/240689/VIO_ILA/SOURCES/btn_in/sync_reg.vhd:6' bound to instance 'sync_reg_i' of component 'sync_reg' [C:/Users/240689/VIO_ILA/SOURCES/btn_in.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'sync_reg' [C:/Users/240689/VIO_ILA/SOURCES/btn_in/sync_reg.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'sync_reg' (0#1) [C:/Users/240689/VIO_ILA/SOURCES/btn_in/sync_reg.vhd:14]
+	Parameter G_DEB_PERIOD bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/240689/VIO_ILA/SOURCES/btn_in/debouncer.vhd:6' bound to instance 'debouncer_i' of component 'debouncer' [C:/Users/240689/VIO_ILA/SOURCES/btn_in.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Users/240689/VIO_ILA/SOURCES/btn_in/debouncer.vhd:18]
+	Parameter G_DEB_PERIOD bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (0#1) [C:/Users/240689/VIO_ILA/SOURCES/btn_in/debouncer.vhd:18]
+INFO: [Synth 8-3491] module 'edge_detector' declared at 'C:/Users/240689/VIO_ILA/SOURCES/btn_in/edge_detector.vhd:6' bound to instance 'edge_detector_i' of component 'edge_detector' [C:/Users/240689/VIO_ILA/SOURCES/btn_in.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'edge_detector' [C:/Users/240689/VIO_ILA/SOURCES/btn_in/edge_detector.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'edge_detector' (0#1) [C:/Users/240689/VIO_ILA/SOURCES/btn_in/edge_detector.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'btn_in' (0#1) [C:/Users/240689/VIO_ILA/SOURCES/btn_in.vhd:20]
+	Parameter G_DEB_PERIOD bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'btn_in' declared at 'C:/Users/240689/VIO_ILA/SOURCES/btn_in.vhd:5' bound to instance 'btn_in_i' of component 'btn_in' [C:/Users/240689/VIO_ILA/SOURCES/rp_top.vhd:239]
+	Parameter G_DEB_PERIOD bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'btn_in' declared at 'C:/Users/240689/VIO_ILA/SOURCES/btn_in.vhd:5' bound to instance 'btn_in_i' of component 'btn_in' [C:/Users/240689/VIO_ILA/SOURCES/rp_top.vhd:239]
+	Parameter G_DEB_PERIOD bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'btn_in' declared at 'C:/Users/240689/VIO_ILA/SOURCES/btn_in.vhd:5' bound to instance 'btn_in_i' of component 'btn_in' [C:/Users/240689/VIO_ILA/SOURCES/rp_top.vhd:239]
+INFO: [Synth 8-3491] module 'pwm_driver' declared at 'C:/Users/240689/VIO_ILA/SOURCES/pwm_driver.vhd:6' bound to instance 'pwm_driver_i' of component 'pwm_driver' [C:/Users/240689/VIO_ILA/SOURCES/rp_top.vhd:258]
+INFO: [Synth 8-638] synthesizing module 'pwm_driver' [C:/Users/240689/VIO_ILA/SOURCES/pwm_driver.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'pwm_driver' (0#1) [C:/Users/240689/VIO_ILA/SOURCES/pwm_driver.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'rp_top' (0#1) [C:/Users/240689/VIO_ILA/SOURCES/rp_top.vhd:16]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'pwm_driver_i'. This will prevent further optimization [C:/Users/240689/VIO_ILA/SOURCES/rp_top.vhd:258]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1264.738 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1264.738 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1264.738 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1264.738 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/240689/VIO_ILA/SOURCES/seg_disp_driver/seg_disp_driver_in_context.xdc] for cell 'seg_disp_driver_i'
+Finished Parsing XDC File [C:/Users/240689/VIO_ILA/SOURCES/seg_disp_driver/seg_disp_driver_in_context.xdc] for cell 'seg_disp_driver_i'
+Parsing XDC File [c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM/ILA_PWM_in_context.xdc] for cell 'ila_out'
+Finished Parsing XDC File [c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM/ILA_PWM_in_context.xdc] for cell 'ila_out'
+Parsing XDC File [c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM/ILA_PWM_in_context.xdc] for cell 'ila_in'
+Finished Parsing XDC File [c:/Users/240689/VIO_ILA/IP/ILA_PWM/ILA_PWM/ILA_PWM_in_context.xdc] for cell 'ila_in'
+Parsing XDC File [c:/Users/240689/VIO_ILA/IP/VIO_PWM/VIO_PWM/VIO_PWM_in_context.xdc] for cell 'vio_out'
+Finished Parsing XDC File [c:/Users/240689/VIO_ILA/IP/VIO_PWM/VIO_PWM/VIO_PWM_in_context.xdc] for cell 'vio_out'
+Parsing XDC File [c:/Users/240689/VIO_ILA/SOURCES/VIO_LED/VIO_LED/VIO_LED_in_context.xdc] for cell 'vio_disp'
+Finished Parsing XDC File [c:/Users/240689/VIO_ILA/SOURCES/VIO_LED/VIO_LED/VIO_LED_in_context.xdc] for cell 'vio_disp'
+Parsing XDC File [C:/Users/240689/VIO_ILA/SOURCES/rp_top.xdc]
+Finished Parsing XDC File [C:/Users/240689/VIO_ILA/SOURCES/rp_top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/240689/VIO_ILA/SOURCES/rp_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/rp_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/rp_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1345.766 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1345.766 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1345.766 ; gain = 81.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1345.766 ; gain = 81.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for ila_in. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ila_out. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for vio_out. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for vio_disp. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1345.766 ; gain = 81.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1345.766 ; gain = 81.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   19 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 4     
++---Registers : 
+	               19 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 8     
+	                1 Bit    Registers := 25    
++---Muxes : 
+	   2 Input   19 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1345.766 ; gain = 81.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1345.766 ; gain = 81.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1345.766 ; gain = 81.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1345.766 ; gain = 81.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1345.766 ; gain = 81.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1345.766 ; gain = 81.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1345.766 ; gain = 81.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1345.766 ; gain = 81.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1345.766 ; gain = 81.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1345.766 ; gain = 81.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------+----------+
+|      |BlackBox name   |Instances |
++------+----------------+----------+
+|1     |VIO_PWM         |         1|
+|2     |VIO_LED         |         1|
+|3     |ILA_PWM         |         2|
+|4     |seg_disp_driver |         1|
++------+----------------+----------+
+
+Report Cell Usage: 
++------+---------------------+------+
+|      |Cell                 |Count |
++------+---------------------+------+
+|1     |ILA_PWM_bbox         |     2|
+|3     |VIO_LED_bbox         |     1|
+|4     |VIO_PWM_bbox         |     1|
+|5     |seg_disp_driver_bbox |     1|
+|6     |BUFG                 |     1|
+|7     |CARRY4               |     8|
+|8     |LUT1                 |     8|
+|9     |LUT2                 |     3|
+|10    |LUT4                 |    64|
+|11    |LUT6                 |     8|
+|12    |FDRE                 |    28|
+|13    |IBUF                 |     9|
+|14    |OBUF                 |    21|
++------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1345.766 ; gain = 81.027
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:40 . Memory (MB): peak = 1345.766 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1345.766 ; gain = 81.027
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1345.766 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1345.766 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: cd228f11
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:51 . Memory (MB): peak = 1345.766 ; gain = 81.027
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Common 17-1381] The checkpoint 'C:/Users/240689/VIO_ILA/VIO_ILA.runs/synth_1/rp_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file rp_top_utilization_synth.rpt -pb rp_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  3 09:53:30 2025...
