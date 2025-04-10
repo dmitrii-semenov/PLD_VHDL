@@ -1,0 +1,113 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Apr 10 07:49:01 2025
+# Process ID: 3056
+# Current directory: C:/Users/240689/FIR
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2780 C:\Users\240689\FIR\PC_09.xpr
+# Log file: C:/Users/240689/FIR/vivado.log
+# Journal file: C:/Users/240689/FIR\vivado.jou
+# Running On: PC-077, OS: Windows, CPU Frequency: 3293 MHz, CPU Physical cores: 4, Host memory: 4160 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/240689/FIR/PC_09.xpr
+update_compile_order -fileset sources_1
+create_ip -name fir_compiler -vendor xilinx.com -library ip -version 7.2 -module_name FIR_50k -dir C:/Users/240689/FIR/SOURCES/IP/FIR_50_MHz
+set_property -dict [list CONFIG.Component_Name {FIR_50k} CONFIG.CoefficientSource {COE_File} CONFIG.Coefficient_File {C:/Users/240689/FIR/SOURCES/MATLAB/FIR_50k.coe} CONFIG.Sample_Frequency {6.25} CONFIG.Clock_Frequency {50} CONFIG.Coefficient_Width {12} CONFIG.Data_Width {9} CONFIG.Output_Rounding_Mode {Truncate_LSBs} CONFIG.Output_Width {9} CONFIG.S_DATA_Has_FIFO {false} CONFIG.Coefficient_Sets {1} CONFIG.Coefficient_Sign {Signed} CONFIG.Quantization {Integer_Coefficients} CONFIG.Coefficient_Fractional_Bits {0} CONFIG.Coefficient_Structure {Inferred} CONFIG.Data_Fractional_Bits {0} CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} CONFIG.ColumnConfig {4}] [get_ips FIR_50k]
+generate_target {instantiation_template} [get_files c:/Users/240689/FIR/SOURCES/IP/FIR_50_MHz/FIR_50k/FIR_50k.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  c:/Users/240689/FIR/SOURCES/IP/FIR_50_MHz/FIR_50k/FIR_50k.xci]
+catch { config_ip_cache -export [get_ips -all FIR_50k] }
+export_ip_user_files -of_objects [get_files c:/Users/240689/FIR/SOURCES/IP/FIR_50_MHz/FIR_50k/FIR_50k.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/240689/FIR/SOURCES/IP/FIR_50_MHz/FIR_50k/FIR_50k.xci]
+launch_runs FIR_50k_synth_1 -jobs 4
+wait_on_run FIR_50k_synth_1
+export_simulation -of_objects [get_files c:/Users/240689/FIR/SOURCES/IP/FIR_50_MHz/FIR_50k/FIR_50k.xci] -directory C:/Users/240689/FIR/PC_09.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/240689/FIR/PC_09.ip_user_files -ipstatic_source_dir C:/Users/240689/FIR/PC_09.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/240689/FIR/PC_09.cache/compile_simlib/modelsim} {questa=C:/Users/240689/FIR/PC_09.cache/compile_simlib/questa} {riviera=C:/Users/240689/FIR/PC_09.cache/compile_simlib/riviera} {activehdl=C:/Users/240689/FIR/PC_09.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+add_files -norecurse C:/Users/240689/FIR/SOURCES/SIM/FIR_50k_SIM.vhd
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/240689/FIR/SOURCES/SIM/pkg_FIR_50k_SIM.vhd
+update_compile_order -fileset sources_1
+launch_simulation
+source FIR_50k_TB.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+export_ip_user_files -of_objects  [get_files C:/Users/240689/FIR/SOURCES/SIM/FIR_50k_SIM.vhd] -no_script -reset -force -quiet
+remove_files  C:/Users/240689/FIR/SOURCES/SIM/FIR_50k_SIM.vhd
+relaunch_sim
+update_compile_order -fileset sources_1
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run all
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/FIR_50k_TB/OUT_expected}} 
+current_wave_config {Untitled 2}
+add_wave {{/FIR_50k_TB/OUT_actual}} 
+current_wave_config {Untitled 2}
+add_wave {{/FIR_50k_TB/err_count}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+source FIR_50k_TB.tcl
+close_sim
+launch_simulation
+source FIR_50k_TB.tcl
+close_sim
+launch_simulation
+source FIR_50k_TB.tcl
+close_sim
+launch_simulation
+source FIR_50k_TB.tcl
+close_sim
+launch_simulation
+source FIR_50k_TB.tcl
+close_sim
+launch_simulation
+source FIR_50k_TB.tcl
+add_files -norecurse C:/Users/240689/FIR/SOURCES/SIM/FIR_50k_SIM.vhd
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source FIR_50k_TB.tcl
+close_sim
+launch_simulation
+source FIR_50k_TB.tcl
+close_sim
+launch_simulation
+source FIR_50k_TB.tcl
+close_sim
+launch_simulation
+source FIR_50k_TB.tcl
+close_sim
+launch_simulation
+source FIR_50k_TB.tcl
+close_sim
+launch_simulation
+source FIR_50k_TB.tcl
+close_sim
+launch_simulation
+source FIR_50k_TB.tcl
+close_sim
+launch_simulation
+source FIR_50k_TB.tcl
+close_sim
+launch_simulation
+source FIR_50k_TB.tcl
