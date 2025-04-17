@@ -1,0 +1,123 @@
+              ;==============================================================================;
+              ;
+              ; Michal Kubicek (michal.kubicek@email.cz)
+              ;
+              ;==============================================================================;
+              ;   __  __       _
+              ;  |  \/  |     (_)
+              ;  | \  / | __ _ _ _ __
+              ;  | |\/| |/ _' | | '_ \
+              ;  | |  | | (_| | | | | |
+              ;  |_|  |_|\__,_|_|_| |_|
+              ;
+              ;
+              ;
+              ;==============================================================================;
+              ; Startup and workaround for "Vivado Hardware Manager" problem
+              ;==============================================================================;
+              ;
+              JUMP cold_start             ; Avoid address 003 on start up
+              JUMP cold_start
+              JUMP cold_start
+              JUMP cold_start             ; Address 003
+              ;
+  cold_start: 
+              LOAD s0, FF
+              OUTPUT s0, ID_UART_RESET
+              LOAD s0, 00
+              OUTPUT s0, ID_UART_RESET
+              ;
+              LOAD s0, 0C
+              OUTPUT s0, ID_7SEG_DIG_1
+              LOAD s0, 00
+              OUTPUT s0, ID_7SEG_DIG_2
+              LOAD s0, 0F
+              OUTPUT s0, ID_7SEG_DIG_3
+              LOAD s0, 0E
+              OUTPUT s0, ID_7SEG_DIG_4
+              LOAD s0, 80
+              OUTPUT s0, ID_PWM_REF_0
+              LOAD s0, 40
+              OUTPUT s0, ID_PWM_REF_1
+              LOAD s0, 20
+              OUTPUT s0, ID_PWM_REF_2
+              LOAD s0, 10
+              OUTPUT s0, ID_PWM_REF_3
+              LOAD s0, 08
+              OUTPUT s0, ID_PWM_REF_4
+              LOAD s0, 04
+              OUTPUT s0, ID_PWM_REF_5
+              LOAD s0, 02
+              OUTPUT s0, ID_PWM_REF_6
+              LOAD s0, 01
+              OUTPUT s0, ID_PWM_REF_7
+              ;
+              ;
+              ;
+              ;==============================================================================;
+              ; Main program loop
+              ;==============================================================================;
+              ;
+   main_loop: CALL wait_100ms
+              ;
+              INPUT s3, ID_BTN            ; read state of buttons
+              ;
+              INPUT s1, ID_UART_STATUS
+              COMPARE s1, 0'd
+              JUMP Z, uart_rdy
+              JUMP main_loop
+              ;
+    uart_rdy: COMPARE s3, 1'd
+              JUMP Z, btn_1_active
+              COMPARE s3, 2'd
+              JUMP Z, btn_2_active
+              COMPARE s3, 4'd
+              JUMP Z, btn_3_active
+              COMPARE s3, 8'd
+              JUMP Z, btn_4_active
+btn_1_active: LOAD s1, "F"
+              OUTPUT s1, ID_UART_DATA_OUT
+              LOAD s1, 01
+              OUTPUT s1, ID_UART_WRITE
+              LOAD s1, 00
+              OUTPUT s1, ID_UART_WRITE
+              JUMP main_loop
+btn_2_active: LOAD s1, "S"
+              OUTPUT s1, ID_UART_DATA_OUT
+              LOAD s1, 01
+              OUTPUT s1, ID_UART_WRITE
+              LOAD s1, 00
+              OUTPUT s1, ID_UART_WRITE
+              JUMP main_loop
+btn_3_active: LOAD s1, "T"
+              OUTPUT s1, ID_UART_DATA_OUT
+              LOAD s1, 01
+              OUTPUT s1, ID_UART_WRITE
+              LOAD s1, 00
+              OUTPUT s1, ID_UART_WRITE
+              JUMP main_loop
+btn_4_active: LOAD s1, "A"
+              OUTPUT s1, ID_UART_DATA_OUT
+              LOAD s1, 01
+              OUTPUT s1, ID_UART_WRITE
+              LOAD s1, 00
+              OUTPUT s1, ID_UART_WRITE
+              JUMP main_loop
+              ;
+              ;==============================================================================;
+              ; Include other source files
+              ;==============================================================================;
+              ;
+              INCLUDE "prog_ROM_addr.psm"
+              INCLUDE "prog_ROM_delay.psm"
+              INCLUDE "prog_ROM_IRQ.psm"
+              ;
+              ;
+              ;==============================================================================;
+              ; Interrupt jump instruction
+              ;==============================================================================;
+              ;
+              ADDRESS FFF                 ; interrupt
+              JUMP IntService             ; jump to interrupt subroutine address
+              ;
+              ;==============================================================================;

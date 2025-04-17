@@ -1,0 +1,112 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Thu Apr 17 09:44:30 2025
+| Host         : PC-077 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file rp_top_control_sets_placed.rpt
+| Design       : rp_top
+| Device       : xc7z010
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    34 |
+|    Minimum number of control sets                        |    34 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    70 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    34 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |    10 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |    14 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             124 |           42 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              59 |           20 |
+| Yes          | No                    | No                     |             125 |           33 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              14 |            4 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|                                  Clock Signal                                  |                                                 Enable Signal                                                |                                                 Set/Reset Signal                                                | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  embedded_kcpsm6_i/program_rom/instantiate_loader.jtag_loader_6_inst/CLK       |                                                                                                              |                                                                                                                 |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/flag_enable                                                                      | embedded_kcpsm6_i/processor/internal_reset                                                                      |                1 |              2 |         2.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/write_strobe_flop_8[0]                                                           |                                                                                                                 |                2 |              4 |         2.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/write_strobe_flop_9[0]                                                           |                                                                                                                 |                3 |              4 |         1.33 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/write_strobe_flop_11[0]                                                          |                                                                                                                 |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/write_strobe_flop_10[0]                                                          |                                                                                                                 |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/write_strobe_flop_7[0]                                                           |                                                                                                                 |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG                                                                 |                                                                                                              | uart_block_i/ce_gen_i/cnt[4]_i_1_n_0                                                                            |                1 |              4 |         4.00 |
+|  embedded_kcpsm6_i/program_rom/instantiate_loader.jtag_loader_6_inst/CLK       |                                                                                                              | embedded_kcpsm6_i/program_rom/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.control_dout_int[7]_i_1_n_0 |                1 |              5 |         5.00 |
+|  CLK_IBUF_BUFG                                                                 |                                                                                                              | seg_disp_driver_i/pres_st_seg_mux[2]                                                                            |                1 |              5 |         5.00 |
+|  CLK_IBUF_BUFG                                                                 |                                                                                                              | uart_reset_reg_reg_n_0_[0]                                                                                      |                2 |              5 |         2.50 |
+|  CLK_IBUF_BUFG                                                                 |                                                                                                              | uart_reset_reg_reg_n_0_[1]                                                                                      |                2 |              5 |         2.50 |
+|  CLK_IBUF_BUFG                                                                 |                                                                                                              | embedded_kcpsm6_i/processor/internal_reset                                                                      |                3 |              6 |         2.00 |
+|  CLK_IBUF_BUFG                                                                 |                                                                                                              | embedded_kcpsm6_i/program_rom/instruction[7]                                                                    |                4 |              8 |         2.00 |
+|  CLK_IBUF_BUFG                                                                 |                                                                                                              | pwm_driver_i/cnt_PWM[7]_i_1_n_0                                                                                 |                2 |              8 |         4.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/spm_enable                                                                       |                                                                                                                 |                2 |              8 |         4.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/E[0]                                                                             |                                                                                                                 |                2 |              8 |         4.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/write_strobe_flop_1[0]                                                           |                                                                                                                 |                1 |              8 |         8.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/write_strobe_flop_6[0]                                                           |                                                                                                                 |                4 |              8 |         2.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/write_strobe_flop_3[0]                                                           |                                                                                                                 |                1 |              8 |         8.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/write_strobe_flop_4[0]                                                           |                                                                                                                 |                3 |              8 |         2.67 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/write_strobe_flop_5[0]                                                           |                                                                                                                 |                1 |              8 |         8.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/write_strobe_flop_0[0]                                                           |                                                                                                                 |                2 |              8 |         4.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/write_strobe_flop_2[0]                                                           |                                                                                                                 |                1 |              8 |         8.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/write_strobe_flop_12[0]                                                          |                                                                                                                 |                1 |              8 |         8.00 |
+|  CLK_IBUF_BUFG                                                                 | uart_write_reg                                                                                               |                                                                                                                 |                1 |              8 |         8.00 |
+|  CLK_IBUF_BUFG                                                                 | uart_block_i/uart_rx6_i/buffer_write                                                                         |                                                                                                                 |                1 |              8 |         8.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/WE                                                                               | embedded_kcpsm6_i/processor/internal_reset                                                                      |                3 |             12 |         4.00 |
+|  CLK_IBUF_BUFG                                                                 |                                                                                                              | seg_disp_driver_i/cnt_clk_en_seg[13]_i_1_n_0                                                                    |                4 |             13 |         3.25 |
+|  embedded_kcpsm6_i/program_rom/instantiate_loader.jtag_loader_6_inst/shift_clk | embedded_kcpsm6_i/program_rom/instantiate_loader.jtag_loader_6_inst/shift                                    |                                                                                                                 |                3 |             15 |         5.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/register_enable                                                                  |                                                                                                                 |                2 |             16 |         8.00 |
+|  CLK_IBUF_BUFG                                                                 | embedded_kcpsm6_i/processor/WE                                                                               |                                                                                                                 |                2 |             16 |         8.00 |
+|  embedded_kcpsm6_i/program_rom/instantiate_loader.jtag_loader_6_inst/shift_clk | embedded_kcpsm6_i/program_rom/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.jtag_din_int[17]_i_1_n_0 |                                                                                                                 |                6 |             18 |         3.00 |
+|  CLK_IBUF_BUFG                                                                 |                                                                                                              |                                                                                                                 |               41 |            123 |         3.00 |
++--------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

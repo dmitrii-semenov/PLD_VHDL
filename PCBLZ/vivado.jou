@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Apr 17 07:49:02 2025
+# Process ID: 4768
+# Current directory: C:/Users/240689/PCBLZ
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7976 C:\Users\240689\PCBLZ\PCBLZ.xpr
+# Log file: C:/Users/240689/PCBLZ/vivado.log
+# Journal file: C:/Users/240689/PCBLZ\vivado.jou
+# Running On: PC-077, OS: Windows, CPU Frequency: 3293 MHz, CPU Physical cores: 4, Host memory: 4160 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/240689/PCBLZ/PCBLZ.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/240689/PCBLZ/SOURCES/pwm_driver.vhd
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/Users/240689/PCBLZ/SOURCES/UART/uart_rx6.vhd C:/Users/240689/PCBLZ/SOURCES/UART/ce_gen.vhd C:/Users/240689/PCBLZ/SOURCES/UART/uart_tx6.vhd C:/Users/240689/PCBLZ/SOURCES/UART/uart_block.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/240689/PCBLZ/PCBLZ.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/240689/PCBLZ/PCBLZ.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/240689/PCBLZ/PCBLZ.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/240689/PCBLZ/PCBLZ.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
