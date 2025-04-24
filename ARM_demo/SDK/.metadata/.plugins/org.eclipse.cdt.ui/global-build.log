@@ -1,0 +1,24 @@
+Nothing to build in platform 'rp_zynq_wrapper'
+
+10:12:00 **** Incremental Build of configuration Debug for project hello_world_app ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/240689/ARM_demo/SDK/rp_zynq_wrapper/export/rp_zynq_wrapper/sw/rp_zynq_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/240689/ARM_demo/SDK/rp_zynq_wrapper/export/rp_zynq_wrapper/sw/rp_zynq_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "hello_world_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size hello_world_app.elf  |tee "hello_world_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  51019	   2564	  22664	  76247	  129d7	hello_world_app.elf
+'Finished building: hello_world_app.elf.size'
+' '

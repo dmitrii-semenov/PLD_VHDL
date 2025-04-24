@@ -1,0 +1,10 @@
+09:46:24 **** Build of configuration Debug for project hello_world_app_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 52949 C:/Users/240689/ARM_demo/SDK/rp_zynq_wrapper/export/rp_zynq_wrapper/rp_zynq_wrapper.xpfm standalone_ps7_cortexa9_0 C:/Users/240689/ARM_demo/SDK/hello_world_app_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/240689/ARM_demo/SDK/rp_zynq_wrapper/export/rp_zynq_wrapper/rp_zynq_wrapper.xpfm --sys_config rp_zynq_wrapper --bif C:/Users/240689/ARM_demo/SDK/hello_world_app_system/Debug/system.bif --bitstream C:/Users/240689/ARM_demo/SDK/hello_world_app/_ide/bitstream/rp_zynq_wrapper.bit --elf C:/Users/240689/ARM_demo/SDK/hello_world_app/Debug/hello_world_app.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/240689/ARM_demo/SDK/hello_world_app/_ide/bitstream/rp_zynq_wrapper.bit
+Running C:/appz/Xilinx/Vitis/2022.1/bin/bootgen  -image C:/Users/240689/ARM_demo/SDK/hello_world_app_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+09:46:34 Build Finished (took 9s.901ms)
+
